@@ -37,7 +37,6 @@ def get_pos_tag(text):
     return pos_tags
 
 def print_morphemed_text(pos_tags):
-    print(pos_tags)
     for tag in pos_tags:
         if tag[1].startswith('V'):
             cprint(tag[0], "red", end=" ")
