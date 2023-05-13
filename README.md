@@ -74,6 +74,22 @@ $ export OPENAI_API_KEY=""
 $ python3 main.py
 ```
 
+
+# 任意のファイルを読み込む
+
+```
+def main():
+    save_audio_file = "./assets/LJ037-0171.wav"
+    text = voice_to_text(load_audio(save_audio_file))
+    pos_tags = get_pos_tag(text)
+    print_morphemed_text(pos_tags)
+```
+
+`assets/LJ037-0171.wav` は、パブリックドメインになっている[The LJ Speech Dataset](https://keithito.com/LJ-Speech-Dataset/)のサンプルデータです。
+
+## 実行結果
+![image](./images/image.png)
+
 ## トラブルシュート
 実行したときに下記のエラーが出た場合の対処方法
 
